@@ -17,6 +17,15 @@ pub const revision = revision_without_vendor_info ++ " (" ++ vendor_info ++ ")";
 pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
+
+    const translate = b.addTranslateC(.{
+        .root_source_file = b.path("include/SDL3/SDL.h"),
+        .target = target,
+        .optimize = optimize,
+    });
+    translate.addIncludePath(b.path("include"));
+    _ = translate.addModule("sdl");
+
     const preferred_linkage = b.option(
         std.builtin.LinkMode,
         "preferred_linkage",

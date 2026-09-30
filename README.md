@@ -29,9 +29,14 @@ const sdl_dep = b.dependency("sdl", .{
     //.system_framework_path = null,
     //.library_path = null,
 });
+const sdl = sdl_dep.module("sdl");
 const sdl_lib = sdl_dep.artifact("SDL3");
 const sdl_test_lib = sdl_dep.artifact("SDL3_test");
 ```
+
+The `sdl` module is generated from SDL's canonical `SDL3/SDL.h` header by Zig's
+C translator. Link the `SDL3` artifact separately when the imported declarations
+are used by an executable or library.
 
 ## Examples
 
