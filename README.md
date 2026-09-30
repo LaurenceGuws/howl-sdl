@@ -9,7 +9,7 @@ This is a port of [SDL](https://libsdl.org/) to the Zig build system, packaged f
 
 ## Usage
 
-Requires Zig 0.16.0 or 0.17.0-dev (master).
+Requires the pinned Zig `0.17.0-dev.1980+e78ea8f2c` for this fork.
 
 ```sh
 zig fetch --save git+https://github.com/castholm/SDL.git

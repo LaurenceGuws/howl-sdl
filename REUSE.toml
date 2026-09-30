@@ -10,6 +10,12 @@ SPDX-FileCopyrightText = "Copyright (C) 1997-2025 Sam Lantinga <slouken@libsdl.o
 SPDX-License-Identifier = "Zlib"
 
 [[annotations]]
+path = ".zigversion"
+precedence = "override"
+SPDX-FileCopyrightText = "Copyright (c) 2026 Laurence"
+SPDX-License-Identifier = "MIT"
+
+[[annotations]]
 path = [
     "src/main/psp/SDL_sysmain_runapp.c",
     "src/main/windows/SDL_sysmain_runapp.c",
